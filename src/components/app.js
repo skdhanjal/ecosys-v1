@@ -1,9 +1,8 @@
 import React from 'react';
 import '../styles/app.scss';
 
-export default (
+export default ({name}) => (
     <div>
-        <h1>JSX</h1>
-        <span>My first JSX span!</span>
+        <h1>Welcome, {name}</h1>
     </div>
 );

@@ -6,4 +6,4 @@ import './styles/index.scss';
 
 const container = document.getElementById('container');
 
-ReactDOM.render(App, container);
+ReactDOM.render(<App name="Shashi"/>, container);
