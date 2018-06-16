@@ -1,8 +1,10 @@
 import React from 'react';
 import '../styles/app.scss';
 
-export default ({name}) => (
-    <div>
-        <h1>Welcome, {name}</h1>
+import Wellcome from './Wellcome';
+
+export default () => (
+    <div className="app-header">
+        <Wellcome name="Mr. Dhanjal"/>
     </div>
 );

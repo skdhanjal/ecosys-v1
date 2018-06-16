@@ -4,6 +4,6 @@ import App from './components/app';
 
 import './styles/index.scss';
 
-const container = document.getElementById('container');
+const root = document.getElementById('root');
 
-ReactDOM.render(<App name="Shashi"/>, container);
+ReactDOM.render(<App />, root);
