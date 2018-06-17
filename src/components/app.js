@@ -1,10 +1,12 @@
 import React from 'react';
 import '../styles/app.scss';
 
-import Wellcome from './Wellcome';
+import Welcome from './Welcome';
+import FilterSearch from './FilterSearch';
 
 export default () => (
     <div className="app-header">
-        <Wellcome name="Mr. Dhanjal"/>
+        <Welcome name="Mr. Dhanjal"/>
+        <FilterSearch/>
     </div>
 );
