@@ -7,13 +7,13 @@ import List from './List';
 
 import '../../styles/filterSearch.scss';
 
-export default ({header, input, fItems, actions}) => {
+export default ({header, input, options, actions}) => {
   console.log('Rendering filter search:')
   return (
     <div className="filter-search">
       <Header label={header}/>
       <Input value={input} {...actions}/>
-      <List items={fItems} {...actions}/>
+      <List items={options} {...actions}/>
     </div>
   )
 }

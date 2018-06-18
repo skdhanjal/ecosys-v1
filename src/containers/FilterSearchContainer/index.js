@@ -4,8 +4,11 @@ import {connect} from 'react-redux';
 import FilterSearch from '../../components/FilterSearch'
 
 const FilterSearchContainer = ({filterSearch, actions}) => {
+  const {input, options =[], ...rest} = filterSearch;
+  const fOptions = options.filter(item => item.label.toLowerCase().includes(input.toLowerCase()));
+
   return (
-    <FilterSearch {...filterSearch} actions={actions}/>
+    <FilterSearch input={input} options={fOptions} actions={actions} {...rest}/>
   )
 }
 
@@ -16,7 +19,7 @@ const mapDispathToProps = (dispatch) => ({
   }
 })
 
-const mapStateToProps = ({page: {filterSearch}}) => {
+const mapStateToProps = ({filterSearch}) => {
   return {
     filterSearch
   }
