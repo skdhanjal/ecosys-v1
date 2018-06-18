@@ -14,7 +14,6 @@ const FilterSearchContainer = ({filterSearch, actions}) => {
 
 const mapDispathToProps = (dispatch) => ({
   actions: {
-    filterItems: value => dispatch({type: 'filterItems', value}),
     filterInput: value => dispatch({type: 'filterInput', value})
   }
 })
