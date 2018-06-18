@@ -7,35 +7,13 @@ import List from './List';
 
 import '../../styles/filterSearch.scss';
 
-class FilterSearch extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const {input, fItems, ...actions} = this.props;
-
-    return(
-      <div className="filter-search">
-        <Header label="Available Services"/>
-        <Input value={input} {...actions}/>
-        <List items={fItems}/>
-      </div>
-    )
-  }
+export default ({header, input, fItems, actions}) => {
+  console.log('Rendering filter search:')
+  return (
+    <div className="filter-search">
+      <Header label={header}/>
+      <Input value={input} {...actions}/>
+      <List items={fItems} {...actions}/>
+    </div>
+  )
 }
-
-const mapDispathToProps = (dispatch) => ({
-  filterItems: value => dispatch({type: 'filterItems', value}),
-  filterInput: value => dispatch({type: 'filterInput', value})
-})
-
-const mapStateToProps = ({page: {filterSearch}}) => {
-  return {
-    input: filterSearch.input,
-    fItems: filterSearch.fItems
-  }
-}
-
-export default connect(mapStateToProps, mapDispathToProps)(FilterSearch)

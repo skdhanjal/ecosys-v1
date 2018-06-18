@@ -8,6 +8,7 @@ import App from './components/app';
 const defaultState = {
   page: {
     filterSearch: {
+      header:'List of Availble Services',
       input: '',
       oItems:[{label:'Aws Service'}, {label:'Apache Service'}, {label:'Microsoft Online'}, {label: 'Google API'}],
       fItems: [{label:'Aws Service'}, {label:'Apache Service'}, {label:'Microsoft Online'}, {label: 'Google API'}]
